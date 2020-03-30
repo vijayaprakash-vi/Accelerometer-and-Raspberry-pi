@@ -61,7 +61,7 @@ int main(void) // beginning of main function
   {
    
   int dataX = wiringPiI2CReadReg16(fd, REG_DATA_X_LOW); // defining x axis
-        dataX = -(~(int16_t)dataX + 1);
+        dataX = -(~(int16_t)dataX + 1); // converting in to decimal v alue
         int dataY = wiringPiI2CReadReg16(fd, REG_DATA_Y_LOW); //defining Y axis
         dataY = -(~(int16_t)dataY + 1);
         int dataZ = wiringPiI2CReadReg16(fd, REG_DATA_Z_LOW); // defining Z axis
